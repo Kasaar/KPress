@@ -1,5 +1,5 @@
 #include "stb_wrapper.h"
-#include "utils.h"
+#include "kmeans.h"
 
 int main(int argc, char **argv) {
     if (argc > 4 || argc < 2) {

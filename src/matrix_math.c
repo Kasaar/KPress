@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 /**
  * @brief Generates random numbers between 0 and max (inclusive).
@@ -37,4 +38,9 @@ void vector_avg(uint8_t **data, const int num_vectors, uint8_t *dest) {
         }
         dest[i] /= num_vectors;
     }
+}
+
+int distance(uint8_t x1, uint8_t y1, uint8_t z1, uint8_t x2, uint8_t y2, uint8_t z2) {
+    int dist = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2) + (z1 - z2) * (z1 - z2);
+    return sqrt(dist);
 }
