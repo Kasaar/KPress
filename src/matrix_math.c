@@ -2,26 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <math.h>
-
-/**
- * @brief Generates random numbers between 0 and max (inclusive).
- * 
- * @param max The maximum number to be generated.
- * @param num_indices The number of numbers to generate.
- * @return An array of 
- */
-void random_indices(int max, const int num_indices, int *dest) {
-    // Seed the RNG
-    srand(time(NULL));
-
-    int indices[num_indices];
-
-    for (int i = 0; i < num_indices; i++) {
-        indices[i] = rand() % (max + 1); // Generate a random index from 0 to max
-    }
-}
 
 /**
  * @brief Computes the partwise average of multiple 1x3 vectors.
@@ -32,11 +13,11 @@ void random_indices(int max, const int num_indices, int *dest) {
  */
 void vector_avg(uint8_t **data, const int num_vectors, uint8_t *dest) {
     for (int i = 0; i < 3; i++) {
-        dest[i] = 0;
+        int acc = 0;
         for (int j = 0; j < num_vectors; j++) {
-            dest[i] += data[j][i];
+            acc += data[j][i];
         }
-        dest[i] /= num_vectors;
+        dest[i] = (uint8_t)(acc / num_vectors);
     }
 }
 

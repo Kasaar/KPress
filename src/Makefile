@@ -2,7 +2,7 @@ IDIR =../inc
 CC=gcc
 CFLAGS=-I$(IDIR)
 
-ODIR=obj
+ODIR=objs
 LDIR =../stb_image
 
 DEPS = $(patsubst %,$(IDIR)/%,$(LDIR))
@@ -16,7 +16,5 @@ $(ODIR)/%.o: %.c $(DEPS)
 kpress: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
-.PHONY: clean
-
 clean:
-	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ 
+	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
