@@ -18,3 +18,26 @@ Windows machines, and decreases compile time via the preprocessor.
 KPress relies on `cstdio`, `cstring`, `cstdlib`, `ctime`, and `cmath`
 standard C libraries to run. To-do: remove these dependencies by
 replacing them with equivalent single-header libraries.
+
+If you build from the Git repository you will also need to install make
+and gcc to use the Makefile (e.g. `brew install make` on macOS,
+`sudo apt install make` on Debian variants). Note that gcc and make
+are most easily downloaded via Xcode on MacOS.
+
+### Installation ###
+
+The recommended way to obtain the source code is to clone the entire
+[repository](https://github.com/Kasaar/KPress) from
+[GitHub](https://github.com)
+
+    git clone git://github.com/Kasaar/KPress.git
+
+Building the main application is a simple as
+
+    cd src
+    make
+
+If you are not using make or gcc, you will have to manually compile
+the application. See Makefile for required files to be linked.
+
+### Usage ###
