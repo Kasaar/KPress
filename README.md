@@ -41,3 +41,20 @@ If you are not using make or gcc, you will have to manually compile
 the application. See Makefile for required files to be linked.
 
 ### Usage ###
+
+After compiling, in the `src` directory, run the following command:
+
+    ./kpress <image_path> <save_name> <clusters> <epochs>
+
+<image_path>: The full path from the `src` directory to the image
+file you want to compress.
+
+<save_name>: The name you want the compressed image to have.
+Do no include the full path or the file extension (i.e. .png).
+The file will be saved to the src directory.
+
+<clusters>: The number of centroids you want the algorithm to
+consider. It is recommended to use powers of 2.
+
+<epochs>: The number of times to iterate if the algorithm
+does not converge.
