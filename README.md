@@ -30,7 +30,7 @@ The recommended way to obtain the source code is to clone the entire
 [repository](https://github.com/Kasaar/KPress) from
 [GitHub](https://github.com)
 
-    git clone git://github.com/Kasaar/KPress.git
+    git clone https://github.com/Kasaar/KPress.git
 
 Building the main application is a simple as
 
