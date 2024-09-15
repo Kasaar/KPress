@@ -136,7 +136,7 @@ void kmeans(Image *img, int k, int epochs, int *indices, uint8_t **means) {
 /**
  * @brief Given the clusters and information about to which cluster
  * each pixel belongs, update the original image by reassigning
- * each piel in the image to its cluster value.
+ * each pixel in the image to its cluster value.
  * 
  * @param img A pointer to an Image struct.
  * @param indices A matrix to hold to which cluster each pixel belongs.
